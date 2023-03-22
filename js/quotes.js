@@ -134,9 +134,22 @@ const quotes = [
   },
 ];
 
-const quote = document.querySelector("div#quote span:first-child");
-const author = document.querySelector("div#quote span:last-child");
+const quote = document.querySelector("#quote");
+const author = document.querySelector("#author");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+const copy = document.querySelector(".copy");
 
 quote.innerText = todaysQuote.quote;
 author.innerText = `- ${todaysQuote.author} -`;
+
+/* Clipboard API
+navigator.clipboard.writeText("복사할 텍스트")
+writeText()의 인자로 넣은 텍스트가 복사된다.
+비동기로 복사를 수행하고 Promise 를 반환하므로, 복사가 완료되었을 때 수행할 작업을 then의 콜백함수로 넘어주면 된다. */
+
+copy.addEventListener("click", () => {
+  const text = quote.innerText;
+  window.navigator.clipboard.writeText(text).then(() => {
+    alert("copied!"); // 복사가 완료되면 이 부분이 호출된다.
+  });
+});
