@@ -3,7 +3,6 @@ body {
   margin: 0;
   font-family: sans-serif;
   color: white;
-  /* background-color: #ff9999; */
   display: flex;
   background-size: cover;
   flex-direction: column;

@@ -3,7 +3,7 @@ const AIP_KEY = "85065b946105af2bf6375b2a27afcc51";
 const weather = document.querySelector("#weather span:first-child");
 const city = document.querySelector("#weather span:nth-child(2)");
 const temp = document.querySelector("#weather span:nth-child(3)");
-const clothes = document.querySelector("#weather div:last-child");
+let clothes = document.querySelector("#weather div:last-child");
 
 function clothesByTemp(temp) {
   let wear = "";

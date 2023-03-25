@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bookmarks.css" />
     <title>Momentum App</title>
   </head>
   <body>
     <div class="container">
       <div class="card">
+        <!-- weather-section -->
         <div id="weather">
           <span></span>
           <span></span>
           <span></span>
           <div></div>
         </div>
+
+        <!-- date-section -->
         <h2 id="today">0000.00.00 SUN</h2>
         <h2 id="clock">00:00:00</h2>
+
+        <!-- login-section -->
         <form id="login-form" class="hidden">
           <input
             required
@@ -28,10 +34,55 @@
           <input type="submit" value="Log In" />
         </form>
         <h1 id="greeting" class="hidden"></h1>
+
+        <!-- bookmarks-section -->
+        <div class="bookmarks">
+          <h3>Your Bookmarks</h3>
+          <div class="bookmarks_icons">
+            <ul>
+              <li class="google">
+                <a href="https://www.google.com/" target="_blank"
+                  ><img src="./img/google_icon.png" alt="google 바로가기"
+                /></a>
+              </li>
+              <li class="naver">
+                <a href="https://www.naver.com/" target="_blank"
+                  ><img src="./img/naver_icon.png" alt="naver 바로가기"
+                /></a>
+              </li>
+              <li class="github">
+                <a href="https://github.com/" target="_blank"
+                  ><img src="./img/github_icon.png" alt="github 바로가기"
+                /></a>
+              </li>
+              <li class="nomad">
+                <a href="https://nomadcoders.co/" target="_blank"
+                  ><img src="./img/nomad_icon.png" alt="nomadcoders 바로가기"
+                /></a>
+              </li>
+              <li class="programmers">
+                <a href="https://programmers.co.kr/" target="_blank"
+                  ><img
+                    src="./img/programmers_icon.png"
+                    alt="programmers 바로가기"
+                /></a>
+              </li>
+              <li class="baekjoon">
+                <a href="https://www.acmicpc.net/" target="_blank"
+                  ><img src="./img/baekjoon_icon.png" alt="baekjoon 바로가기"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- todo list-section -->
         <form id="todo-form">
           <input required type="text" placeholder="What's your goal today?" />
         </form>
         <ul id="todo-list"></ul>
+
+        <!-- quote-section -->
         <div id="quote-section">
           Daily Quote
           <span id="quote"></span>
